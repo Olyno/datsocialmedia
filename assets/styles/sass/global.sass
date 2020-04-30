@@ -1,0 +1,77 @@
+@use 'colors'
+@use 'normalizer'
+
+.joinDescription
+    @extend .is-white
+    @extend .is-primary-bg
+    border-top-right-radius: 30px
+    border-bottom-right-radius: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    .middle-logo
+        @extend .is-primary-bg
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        right: -8.9%
+        top: 50%
+        width: 95px
+        height: 95px
+        border-radius: 50%
+        border: solid white 10px
+        img
+            width: 40px
+            height: 40px
+    .content
+        .level-left
+            h1
+                @extend .is-white
+                margin-bottom: 0
+                padding-left: 15px
+        p
+            font-size: 21px
+
+.signin
+    .section
+        .thingSection
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            p
+                color: colors.$gray
+                font-size: 23px
+            &.is-active
+                p
+                    color: black
+                .line
+                    background-color: colors.$primary
+                    width: 10%
+                    height: 2px
+    .signinButton
+        @extend .is-white
+        @extend .is-primary-bg
+        font-size: 30px
+        width: 100%
+        height: 55px
+        padding: 0
+        border-radius: 28px
+    .content
+        display: flex
+        align-items: center
+        justify-content: center
+        form
+            width: 60%
+            .input
+                box-shadow: unset
+                width: 100%
+                border: none
+                border-bottom: solid colors.$gray 2px
+            .forgot_password
+                color: colors.$gray
+                margin: 25px 0
+                font-size: 16px
+            .signupText
+                color: colors.$gray

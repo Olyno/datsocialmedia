@@ -1,0 +1,120 @@
+.is-primary {
+  color: #6E91EF;
+}
+
+.is-primary-bg, .joinDescription, .joinDescription .middle-logo, .signin .signinButton {
+  background-color: #6E91EF;
+}
+
+.is-gray {
+  color: #868686;
+}
+
+.is-gray-bg {
+  background-color: #868686;
+}
+
+.is-white, .joinDescription, .joinDescription .content .level-left h1, .signin .signinButton {
+  color: white;
+}
+
+.is-white-bg {
+  background-color: white;
+}
+
+html, body {
+  height: 100%;
+}
+
+.content ul {
+  list-style: none;
+}
+
+.is-full-height {
+  height: 100%;
+}
+
+.title, .subtitle {
+  color: inherit;
+}
+
+.joinDescription {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.joinDescription .middle-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -8.9%;
+  top: 50%;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: solid white 10px;
+}
+.joinDescription .middle-logo img {
+  width: 40px;
+  height: 40px;
+}
+.joinDescription .content .level-left h1 {
+  margin-bottom: 0;
+  padding-left: 15px;
+}
+.joinDescription .content p {
+  font-size: 21px;
+}
+
+.signin .section .thingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.signin .section .thingSection p {
+  color: #868686;
+  font-size: 23px;
+}
+.signin .section .thingSection.is-active p {
+  color: black;
+}
+.signin .section .thingSection.is-active .line {
+  background-color: #6E91EF;
+  width: 10%;
+  height: 2px;
+}
+.signin .signinButton {
+  font-size: 30px;
+  width: 100%;
+  height: 55px;
+  padding: 0;
+  border-radius: 28px;
+}
+.signin .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signin .content form {
+  width: 60%;
+}
+.signin .content form .input {
+  box-shadow: unset;
+  width: 100%;
+  border: none;
+  border-bottom: solid #868686 2px;
+}
+.signin .content form .forgot_password {
+  color: #868686;
+  margin: 25px 0;
+  font-size: 16px;
+}
+.signin .content form .signupText {
+  color: #868686;
+}
+
+/*# sourceMappingURL=global.css.map */
