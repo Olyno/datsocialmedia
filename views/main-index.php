@@ -38,31 +38,58 @@
 	<div class="column has-text-centered signin">
 		<div class="section is-full-height">
 			<div class="level">
-				<div class="signinSection thingSection level-item is-active">
-					<p>Se connecter</p>
+				<div class="signinSection thingSection level-item <?php echo ($section === 'signin' ? 'is-active' : ''); ?>">
+					<a href="/signin">Se connecter</a>
 					<div class="line"></div>
 				</div>
-				<div class="signupSection thingSection level-item">
-					<p>S'inscrire</p>
+				<div class="signupSection thingSection level-item <?php echo ($section === 'signup' ? 'is-active' : ''); ?>">
+					<a href="/signup">S'inscrire</a>
 					<div class="line"></div>
 				</div>
 			</div>
+			<?php if ($error) echo $error; ?>
 			<div class="content is-full-height">
-				<form action="/signin" method="post">
-					<div class="field">
-						<div class="control">
-							<input type="text" class="input" placeholder="Pseudo ou Email" />
+				<?php if ($section === 'signin') { ?>
+					<form action="/signin" method="post">
+						<div class="field">
+							<div class="control">
+								<input type="text" class="input" name="login" placeholder="Pseudo" />
+							</div>
 						</div>
-					</div>
-					<div class="field">
-						<div class="control">
-							<input type="password" class="input" placeholder="Mot de passe" />
+						<div class="field">
+							<div class="control">
+								<input type="password" class="input" name="password" placeholder="Mot de passe" />
+							</div>
 						</div>
-					</div>
-					<a href="" class="forgot_password">Mot de passe oublié ?</a>
-					<button class="signinButton button">Se connecter</button>
-					<p class="signupText">Nouveau sur DatSocialMedia ? <a href="/signup">Inscrivez vous maintenant</a></p>
-				</form>
+						<a href="" class="forgot_password">Mot de passe oublié ?</a>
+						<button class="signinButton button">Se connecter</button>
+						<p class="signupText">Nouveau sur DatSocialMedia ? <a href="/signup">Inscrivez vous maintenant</a></p>
+					</form>
+				<?php } else if ($section === 'signup') { ?>
+					<form action="/signup" method="post">
+						<div class="field">
+							<div class="control">
+								<input type="text" class="input" name="login" placeholder="Pseudo" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input type="text" class="input" name="email" placeholder="Email" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input type="password" class="input" name="password" placeholder="Mot de passe" />
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input type="password" class="input" name="confirm_password" placeholder="Confirmez votre mot de passe" />
+							</div>
+						</div>
+						<button class="signinButton button">S'inscrire</button>
+					</form>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

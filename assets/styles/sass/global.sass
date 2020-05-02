@@ -40,11 +40,11 @@
             display: flex
             flex-direction: column
             align-items: flex-start
-            p
+            a
                 color: colors.$gray
                 font-size: 23px
             &.is-active
-                p
+                a
                     color: black
                 .line
                     background-color: colors.$primary
@@ -75,3 +75,19 @@
                 font-size: 16px
             .signupText
                 color: colors.$gray
+
+.home
+    .sidebar
+        background-color: #eeeeee
+        height: 100vh
+        position: fixed
+    .content
+        padding: 5rem 5rem
+        overflow-x: scroll
+        overflow: -moz-scrollbars-none
+        -ms-overflow-style: none
+        &::-webkit-scrollbar
+            width: 0 !important
+    .featured
+        background-color: colors.$primary
+        height: 100vh

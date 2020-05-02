@@ -13,10 +13,7 @@ $url = $_SERVER["REQUEST_URI"];
 // on récupère le path
 $path = parse_url($url, PHP_URL_PATH);
 
-@list($null, $controller, $action) = explode($secret["root"]["baseUrl"], $path);
-
-echo var_dump($controller);
-echo var_dump($action);
+@list($null, $controller, $action) = explode('/', $path);
 
 $controller = !empty($controller) ? $controller : "main";
 $action = $action ?? "index";

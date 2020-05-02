@@ -75,11 +75,11 @@ html, body {
   flex-direction: column;
   align-items: flex-start;
 }
-.signin .section .thingSection p {
+.signin .section .thingSection a {
   color: #868686;
   font-size: 23px;
 }
-.signin .section .thingSection.is-active p {
+.signin .section .thingSection.is-active a {
   color: black;
 }
 .signin .section .thingSection.is-active .line {
@@ -115,6 +115,25 @@ html, body {
 }
 .signin .content form .signupText {
   color: #868686;
+}
+
+.home .sidebar {
+  background-color: #eeeeee;
+  height: 100vh;
+  position: fixed;
+}
+.home .content {
+  padding: 5rem 5rem;
+  overflow-x: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+.home .content::-webkit-scrollbar {
+  width: 0 !important;
+}
+.home .featured {
+  background-color: #6E91EF;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=global.css.map */
